@@ -18,7 +18,7 @@ def get_content(url):
     title = soup.select('.l_a > h1')[0].string# title
     keywords = soup.find('meta',{'name':'keywords'})['content']# keywords
     des = soup.find('meta',{'name':'description'})['content']
-    source = soup.select('.l_a > div.la_tool > span.la_t_b')[0].string.strip()
+    source = soup.select('.l_a > div.la_tool > span.la_t_b > a')[0].string.strip()
     time = soup.select('.l_a > div.la_tool > span.la_t_a')[0].string
         
     body_content = soup.find('div', {'class': 'la_con'})
